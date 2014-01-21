@@ -102,6 +102,14 @@
       bottom: 3em;
     }
 
+    .url {
+      font-family: monospace;
+      color: rgba(189, 52, 7, 1);
+    }
+    .url:hover {
+      text-decoration: underline;
+    }
+
     /* Slide-specific styling */
 
     #slide-title .mozilla {
@@ -114,6 +122,12 @@
       font-family: "Open Sans";
       letter-spacing: -.04em;
     }
+
+    #slide-recipe ol, #slide-advanced ol {
+      font-size: xx-large;
+      list-style: upper-latin;
+    }
+
 
     #slide-inverse .footnote {
       bottom: 12px;
