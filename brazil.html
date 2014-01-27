@@ -8,133 +8,184 @@
   <body>
     <textarea id="source">
 
-class: left, middle, inverse
+name: mozilla
+background-image: url(img/grey.png)
+class: left, middle, scale
+
+---
 name: title
-.middle[
-  ![Default-aligned image](img/chefpot.png)
-]
+template: mozilla
 
 # .mozilla[mozilla] .wordmark[Appmaker]
 
-  1. Why we want to democratize mobile app creation
-  1. How we think we can do it
-  1. Fun **demos**
-  1. (Mostly) simple code
-  1. How you can help
+**Mozilla is planning to democratize the mobile app ecosystem**
 
+&mdash; _Why_ we think it's an important project
 
+&mdash; _How_ Appmaker works (**demos** and some **code**)
 
----
+&mdash; Apps, Components, Channels
 
-# Agenda
+&mdash; _How_ you can help!
 
-1. Why?
-1. Quick demo
-1. High level architecture
-1. How components talk to each other
-1. How to make a component
-1. What kinds of apps?
-1. What next?
-1. ...
+Discussion
 
 ---
+template: mozilla
 
 # Introduction
 
+## I speak French, English, a little Spanish
+
+## I don't speak Portuguese
+
+## If I speak too fast, wave your hands
+
 ---
-.left-column[
-  ##the problem
-]
 
-.right-column[
-  ## It's too hard to make mobile apps
+template: mozilla
+class: black
 
-  Only a tiny percentage of the world can create for mobile
+# Mobile is a shift from _read-write_ to _read-only_
 
-  Using the Web can help (FirefoxOS, WebAPIs, …)
+## The next billion people will only use phones
 
-  but it's still _too hard_ to make the **first app**
+## Today's mobile world is built for consumption, not creation
 
-  * HTML5
-  * CSS
-  * JavaScript
-  * Manifests
-  * Web APIs
-  * Storage
-  * Offline
-  * Syncing
-  * Appstores
-  * Hosting
-  * HTTP
-  * Responsive Design
-  * Packaging
-  * …
+## .punchline[_so what?_]
 
-]
 ---
-.left-column[
-  ##the problem
-]
 
-.right-column[
-## And so…
+# Lost opportunity 
 
-Most people think it's too hard for them, or they try the hard way and fail, and so they never get to step 2.
+## The internet has changed the world because _anybody_ could publish
 
-![TBD image of someone finding it's too hard](img/toohard.png)
+## For global personal and economic development, we need openness: having _many_ authors, _many_ use cases.
 
-They think technology is out of reach.
+## .punchline[_let's do that on mobile!_]
 
-The promise of the internet passes them by.
-
-Their only role is to consume.
-
-]
 ---
-.left-column[
-  ##the problem
-  ##the vision
-]
 
-.right-column[
-.center[
-  # It doesn't have to be this way.
-]
-]
 
---
+## Current Mobile App Winners:
 
-.right-column[
-.center[
+* Games
+* Big brands
+* Genius independent developers
+* Control points (e.g. app stores)
+
+## Losers:
+
+* Non-commercial actors (local governments, non-profits, …)
+* Beginners
+* Challengers of the ecosystem incumbents
+* Non-developers &amp; most creative individuals
+
+
+---
+class: center,middle
+
+# Doesn't the web
+# (FirefoxOS, …)
+# solve this?
+
+---
+
+# Yes, for developers
+
+## We have the technical pieces in place
+
+Domains, URLs, open source, FirefoxOS, Web APIs, …
+
+## The web stack is rich, but tall!
+
+  HTML5, CSS, JavaScript, Manifests, Web APIs, Storage, Offline
+  Syncing,
+  Appstores,
+  Hosting,
+  HTTP, CORS, Security,
+  Responsive Design, Github, NodeJS,
+  Packaging,
+   …
+
+### .punchline[Great for developers, _too much_ for most people]
+
+---
+
+# If it's too hard to feel _rewarded_
+
+most people won't try, or they will try the hard way and fail
+
+&rarr; they never get to step 2.
+
+&rarr; they think creating with technology is not for them.
+
+&rarr; the promise of the internet passes them by.
+
+&rarr; David is sad
+
+.emoticon[😢]
+
+---
+class: center, middle
+
+  # It doesn't have
+  # to be this way.
+
+---
+class: white, center, middle
+
   # Anyone should be able to make an app.
-]
-]
+
+.emoticon[😃]
 
 ---
-template: true
+
 .left-column[
-  ##the problem
-  ##the vision
-  ##our approach
+### The approach:
 ]
 
 .right-column.progressive[
 
-## Start simple, start with fun
+## Start simple and _fun_; design is critical; learn from games
 {{content}}
 ]
 
 --
 
-## Make an app in 5 minutes
-(demo videos can help!)
+## Anyone should be able to make an app in 5 minutes
+(make it addictive, progressive, relevant)
 {{content}}
 
 --
 
-## Find an app, remix an app
-(_Nobody_ starts from scratch!)
+## Find an app, remix an app, make it your own
+(Real programmers _never_ start from scratch!)
 {{content}}
+
+---
+
+# Our Goal:
+
+## We're happy when you feel _proud_ that you made a thing on your phone.
+
+(For programmers: we're happy when you want to submit a component for others to use.)
+
+# Our status:
+
+## Just starting &mdash; alpha launched this week.
+
+
+---
+
+# Our audience: Sofia
+
+* 15 years old, lives in a small town
+* No brothers or sisters, many friends
+* Interested in fashion, writing; creative
+* Likes using her smartphone
+* Bored in school
+* Ambitious, not sure of her path
 
 ---
 class: center, middle, inverse
@@ -156,7 +207,7 @@ name: walkthrough
 ---
 name: recipe
 
-# Appmaking recipe
+# The Appmaker recipe
 
 1. Find an app you like
 1. Modify it
@@ -166,13 +217,83 @@ name: recipe
 1. Share
 
 ---
+
+# Possible paths for Sofia
+
+* Take a chat app, and make a place for her and her friends to talk
+* Take a photoblogging app, and make a fashion app instead
+* Take a recipe-publishing app, and make it share her poetry instead
+
+---
+
+# What success looks like
+
+* Sofia enjoys making _her own app_
+  * amused, proud, shares with friends
+  * this doesn't feel like school or work, more like a game
+* Sofia curious about how app works
+  * Starts to learn programming to make a component
+  * Makes a fashion component
+* Sofia **builds an app that helps:**
+  * show her creativity
+  * show her talent
+  * show her ambitition
+  * gets her a job
+
+---
+
+# Appmaker Design Secrets
+
+### Components are simple
+
+### Channels are simple
+
+### We build on modern web technology &amp; **hide** most of it
+
+---
+
+# Appmaker is _not_ trying to:
+
+* build tools for developers
+* teaching code directly
+* for making apps in appstores
+* making conventional business apps
+
+We want people to graduate from Appmaker to more advanced tools.
+
+---
+
+# What kinds of apps?
+
+That will depend on what components we have.
+
+Current focus is on simple, fun, personalizable.
+
+* photos, music, camera, forms, stories, simple games
+* chat rooms, lists of things
+* apps for one person; apps for small groups (family, friends, colleagues)
+* apps in service of "real world" small business: customer communication, simple payments
+
+---
+
+# Where will the apps work?
+
+Appmaker apps are built on the web.
+
+Today they work best on FirefoxOS, Firefox for Android
+
+Use as web pages on other phones (depending on components)
+
+Over time, spread to more operating systems
+
+---
 name: advanced
 
-# _Advanced_ Appmaking recipe
+# _Advanced_ recipe
 
 1. Find an app you like
 1. Modify it
-1. _Create a new component_
+1. **Create a new component** &rarr; how?
 1. Add components
 1. Connect components
 1. Publish
@@ -181,9 +302,9 @@ name: advanced
 ---
 name: component-structure
 
-# How do we create components?
+# What are components?
 
-## Use the Web: Web Components
+## A specific kind of Web Components
 
 * new part of HTML5, being standardized
 * Polyfill library in the meantime
@@ -192,16 +313,23 @@ name: component-structure
 ---
 class: tutorial
 
+
+### 1. Clone the repo 
+
+`git@github.com:mozilla-appmaker/start-here.git`
+
+(you can rename it)
+
 ```unix
-$ git clone git@github.com:mozilla-appmaker/component-template.git
-$ mkdir component-brazil
-$ cd component-brazil
-$ npm install -g grunt-init
-$ grunt-init ../component-template
+$ git clone git@github.com:your_name/my-component.git
+$ cd my-component
 $ npm install
-$ grunt test-server
+$ grunt # starts a server, gives a URL
 ```
 
+### 2. Teach Appmaker about the URL (in the UI)
+
+### 3. Edit/Save/Reload!
 
 ---
 class: inverse
@@ -269,25 +397,28 @@ name: logic
 Here we describe the logic of the constructor
 
 ---
-name: targets
+name: challenges
 
-# Where do the Apps run?
+# Current Challenges
 
-## FirefoxOS and Firefox on Android
-For now as _hosted_ apps
+Need to test both relevance and design
 
-## Firefox on Mac/Windows/Linux as well
-… but the apps are really for mobile
+* partnerships to test in real markets, and not just in the lab
+* what does Sofia _really_ want to make?
 
-## Other phone operating systems
-… depending on the requirements of the components
+Need more components
+
+* it's a combinatorial system: needs more inputs
+* what components will _you_ make?
+
+Need more contributors
+
+* hugely ambitious project: we need your help!
 
 ---
 # Future
 
-Many more apps
-
-Many more components
+More apps, components, languages
 
 On-tablet authoring
 
@@ -296,19 +427,10 @@ On-phone authoring
 ---
 template: true
 
-.left-column[
-  ##the problem
-  ##the vision
-  ##our approach
-  ##demo
-  ##code
-  ##we need your help
-]
+# Big vision needs your help
 
-.right-column[
-  ## Appmaker has a big vision - we need help!
-  {{content}}
-]
+{{content}}
+
 
 --
 
@@ -327,17 +449,12 @@ Teach someone
 
 --
 
-Make a component
+Make a new component
 {{content}}
 
 --
 
-File bugs
-{{content}}
-
---
-
-FIX bugs!
+File bugs, _fix_ bugs
 {{content}}
 
 --
@@ -351,15 +468,20 @@ Or whatever you think is right!
 {{content}}
 
 ---
+name: last
+class: white
 
 ## muito obrigado pela sua paciência
 
 # Any questions?
 
+![Default-aligned image](img/chefpot.png)
+
 .footer[
 .footer_bl[
 ## David Ascher [da@mozilla.com](mailto:da@mozilla.com)
 ## [appmaker.mozillalabs.com](https://appmaker.mozillalabs.com)
+## [github://mozilla-appmaker](github.com/mozilla-appmaker)
 ]
 ]
 ---
@@ -373,6 +495,7 @@ Or whatever you think is right!
     </script>
     <script type="text/javascript">
       var slideshow = remark.create({
+          ratio: "16:9",
           highlightStyle: 'monokai_sublime',
           highlightLanguage: 'html'
         });

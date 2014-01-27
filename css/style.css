@@ -4,31 +4,50 @@
 
     body {
       font-family: 'Open Sans';
-      font-size: 20px;
+      font-size: 30px;
+      color: white;
     }
     h1, h2, h3 {
-      font-family: 'Yanone Kaffeesatz';
+      font-family: 'Open Sans';
       font-weight: 400;
       margin-bottom: 0;
     }
-    h1 { font-size: 4em; }
-    h2 { font-size: 2em; }
-    h3 { font-size: 1.6em; }
+    h1 {
+      margin-top: 0;
+      font-size: 3em;
+      line-height: 1em;
+      font-family: "Open Sans Condensed";
+    }
+    h2 { font-size: 1.5em; }
+    h3 { font-size: 1.2em; }
     .footnote {
       position: absolute;
       bottom: 3em;
     }
+
+    .punchline {
+      float: right;
+      color: rgba(255, 230, 121, 1);
+    }
+
     li p { line-height: 1.25em; }
     .red { color: #fa0000; }
     .large { font-size: 2em; }
     a, a > code {
-      color: rgb(249, 38, 114);
+      color: rgba(249, 209, 38, 1);
       text-decoration: none;
     }
+    .wite a {
+      color: red;
+    }
     code {
+      padding: .3em;
       border-radius: 5px;
-      background: #e7e8e2;
-      font-size: 16px;
+      background: #444;
+      /*font-size: 24px;*/
+    }
+    code.unix {
+      margin-top: 1em;
     }
     .pull-left {
       float: left;
@@ -48,6 +67,33 @@
       font-size: 0.9em;
       padding: 15px;
     }
+
+    .remark-slide .remark-slide-number {
+      left: 1em;
+      right: inherit;
+      font-size: small;
+    }
+    .emoticon {
+      position: absolute;
+      right: 1em;
+      bottom: .5em;
+      font-size: 300%;
+    }
+
+    .remark-slide-content {
+      background-position: top !important;
+      background-image: url("../img/grey.png");
+      background-size: 100%;
+    }
+
+    .black {
+      background: black !important;
+    }
+    .white {
+      background: white !important;
+      color: black;
+    }
+
     .inverse {
       background: #23241F;
       color: #777872;
@@ -89,6 +135,8 @@
     }
 
     .footer {
+      text-align: right;
+      line-height: 1em;
       position: absolute;
       left: 0;
       right: 0;
@@ -104,11 +152,15 @@
 
     .url {
       font-family: monospace;
-      color: rgba(189, 52, 7, 1);
+      color: rgba(249, 255, 18, 1);
     }
     .url:hover {
       text-decoration: underline;
     }
+    .scale {
+      background-size: 100%;
+    }
+
 
     /* Slide-specific styling */
 
@@ -163,24 +215,38 @@
       z-index: 0;
     }
 
+    #slide-last .fork {
+      position: absolute;
+      top: 0;
+      right: 0;
+      border: 0;
+    }
+
     /* Two-column layout */
     .left-column {
-      color: #777;
+      color: #aaa;
       width: 25%;
       height: 92%;
       float: left;
+      padding-top: 1em;
     }
+      .left-column h2 {
+        font-size: 1em;
+      }
+
       .left-column h2:last-of-type, .left-column h3:last-child {
-        color: #000;
+        color: #fff;
       }
     .right-column {
       width: 70%;
       float: right;
-      padding-top: 2em;
     }
-    .right-column.progressive h2, .right-column.progressive h3 {
-      color: #777;
+    .right-column h2 {
+      padding-top: .5em;
     }
-    .right-column.progressive h2:last-of-type, .right-column.progressive h3:last-child {
-      color: #000;
+    .right-column.progressive h2, .right-column.progressive h3, .right-column.progressive p {
+      color: #aaa;
+    }
+    .right-column.progressive h2:last-of-type, .right-column.progressive h3:last-child, .right-column.progressive p:last-of-type {
+      color: #fff !important;
     }

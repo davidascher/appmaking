@@ -17,6 +17,11 @@ hljs.LANGUAGES.unix = function() {
             begin: '[a-z_\-]+',
             end: /$/,
             contains: [
+            {
+              className: 'params',
+              begin: '#',
+              end: '$'
+            },
               {
                 className: 'string',
                 begin: '[\.a-z_\-]+',
@@ -25,7 +30,7 @@ hljs.LANGUAGES.unix = function() {
                   {
                     className: 'title',
                     begin: ' -[a-z_]+',
-                    end: ' ',
+                    end: '$'
                   }
                 ]
               }
