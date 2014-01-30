@@ -359,15 +359,13 @@ class: inverse
 name: sample
 
 ```
-<polymer-element name="ceci-flickr"
-  extends="ceci-element"
+<polymer-element name="ceci-flickr" extends="ceci-element"
   attributes="onlytags searchterm location"
   onlytags="false" searchterm="house">
   <template>
     <link rel="stylesheet" href="component.css"></link>
     <img id="flickr" class="image" on-click="{{sendImage}}"></button>
     <div id="loading" class="loading"></div>
-    <shadow></shadow>
     <script type="text/json" id="ceci-definition">
 ```
 .inverse.fakecode[
@@ -388,54 +386,54 @@ name: sample
 ```
 
 ---
+class: inverse
 name: JSON
 
 ```javascript
-      {
-        "name": "Flickr Image Viewer",
-        "tags": ["flickr", "click", "tap"],
-        "thumbnail": "./thumbnail.png",
-        "broadcasts": {
-          "sendImage": {
-            "label": "Send image URL",
-            "description": "Occurs when the image is clicked",
-            "default": true
-          }
-        },
-        "listeners": {
-          "newImage": {
-            "description": "Searches for a new image",
-            "label": "Fetch New Image"
-          }
-        },
-        …
+{
+  "name": "Flickr Image Viewer",
+  "tags": ["flickr", "click", "tap"],
+  "thumbnail": "./thumbnail.png",
+  "broadcasts": {
+    "sendImage": {
+      "label": "Send image URL",
+      "description": "Occurs when the image is clicked",
+      "default": true
+    }
+  },
+  "listeners": {
+    "newImage": {
+      "description": "Searches for a new image",
+      "label": "Fetch New Image"
+    }
+  },
+  …
 ```
 
 ---
+class: inverse
 
 ```
-…
-        "attributes": {
-          "onlytags": {
-            "label": "Tag Mode",
-            "description": "Only use tags to search",
-            "editable": "boolean",
-            "listener": true
-          },
-          "location": {
-            "label": "Location",
-            "description": "Location used to filter images (lat, long)",
-            "editable": "text",
-            "listener": true
-          },
-          "searchterm": {
-            "label": "Search term",
-            "description": "Term used to search for images",
-            "editable": "text",
-            "listener": true
-          }
-        }
-      }
+"attributes": {
+  "onlytags": {
+    "label": "Tag Mode",
+    "description": "Only use tags to search",
+    "editable": "boolean",
+    "listener": true
+  },
+  "location": {
+    "label": "Location",
+    "description": "Location used to filter images (lat, long)",
+    "editable": "text",
+    "listener": true
+  },
+  "searchterm": {
+    "label": "Search term",
+    "description": "Term used to search for images",
+    "editable": "text",
+    "listener": true
+  }
+}
 ```
 
 ---
@@ -447,28 +445,29 @@ point out where the logic is in the template.
 
 ---
 name: logic
+class: inverse
 
 ```javascript
-    Polymer('ceci-flickr', {
-      ready: function () {
-        …
-      },
-      sendImage: function () {
-        this.broadcast('sendImage', this.$.flickr.getAttribute('src'));
-      },
-      onlytagsChanged: function () {
-        this.newImage();
-      },
-      searchtermChanged: function () {
-        this.newImage();
-      },
-      getJSON: function(url, successHandler, errorHandler) {
-      …
-      },
-      newImage: function() {
-      …
-      }
-    });
+Polymer('ceci-flickr', {
+  ready: function () {
+    …
+  },
+  sendImage: function () {
+    this.broadcast('sendImage', this.$.flickr.getAttribute('src'));
+  },
+  onlytagsChanged: function () {
+    this.newImage();
+  },
+  searchtermChanged: function () {
+    this.newImage();
+  },
+  getJSON: function(url, successHandler, errorHandler) {
+    …
+  },
+  newImage: function() {
+    …
+  }
+});
 ```
 ---
 name: flickr
@@ -590,7 +589,7 @@ name: last
 
 ## muito obrigado pela sua paciência
 
-# Questions?
+# Perguntas?
 
 ![Default-aligned image](img/chefpot.png)
 
