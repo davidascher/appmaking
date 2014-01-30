@@ -9,8 +9,7 @@
     <textarea id="source">
 
 name: mozilla
-background-image: url(img/grey.png)
-class: left, middle, scale
+class: left, middle, scale, black
 
 ---
 name: title
@@ -18,13 +17,11 @@ template: mozilla
 
 # .mozilla[mozilla] .wordmark[Appmaker]
 
-**Mozilla is planning to democratize the mobile app ecosystem**
+**Mozilla is working to democratize the mobile app ecosystem**
 
 &mdash; _Why_ we think it's an important project
 
 &mdash; _How_ Appmaker works (**demos** and some **code**)
-
-&mdash; Apps, Components, Channels
 
 &mdash; _How_ you can help!
 
@@ -35,11 +32,13 @@ template: mozilla
 
 # Introduction
 
-## I speak French, English, a little Spanish
+### David Ascher, Mozilla Labs, Vancouver, BC
 
-## I don't speak Portuguese
+### I speak French, English, a little Spanish
 
-## If I speak too fast, wave your hands
+### I don't speak Portuguese :-(
+
+### If I speak too fast, wave your hands
 
 ---
 
@@ -48,15 +47,16 @@ class: black
 
 # Mobile is a shift from _read-write_ to _read-only_
 
-## The next billion people will only use phones
+## The next billion internet users will only use phones
 
 ## Today's mobile world is built for consumption, not creation
 
 ## .punchline[_so what?_]
 
 ---
+template: mozilla
 
-# Lost opportunity 
+# Lost opportunity
 
 ## The internet has changed the world because _anybody_ could publish
 
@@ -76,28 +76,43 @@ class: black
 
 ## Losers:
 
-* Non-commercial actors (local governments, non-profits, …)
+* Civil Society (local governments, non-profits, …)
 * Beginners
-* Challengers of the ecosystem incumbents
+* Ecosystem Challengers
 * Non-developers &amp; most creative individuals
 
 
 ---
 class: center,middle
 
-# Doesn't the web
-# (FirefoxOS, …)
-# solve this?
+# We want every developer to be able to make apps.
 
 ---
 
-# Yes, for developers
+class: center,middle
 
-## We have the technical pieces in place
+# FirefoxOS, Web APIs
 
-Domains, URLs, open source, FirefoxOS, Web APIs, …
+---
+class: center,middle
 
-## The web stack is rich, but tall!
+# Can we do even more?
+
+
+---
+
+# One audience: Sophia
+
+## 15 years old, lives in a small town
+## No brothers or sisters, many friends
+## Interested in fashion, writing; creative
+## Likes using her phone
+## Bored in school but ambitious
+
+---
+class: center,middle
+
+# The web stack is tall!
 
   HTML5, CSS, JavaScript, Manifests, Web APIs, Storage, Offline
   Syncing,
@@ -108,7 +123,12 @@ Domains, URLs, open source, FirefoxOS, Web APIs, …
   Packaging,
    …
 
-### .punchline[Great for developers, _too much_ for most people]
+### .punchline[Great for web developers, _too much_ for most people]
+
+---
+class: center,middle
+
+# Sophia could learn web development?
 
 ---
 
@@ -169,45 +189,35 @@ class: white, center, middle
 
 ## We're happy when you feel _proud_ that you made a thing on your phone.
 
-(For programmers: we're happy when you want to submit a component for others to use.)
+## &nbsp;
 
 # Our status:
 
-## Just starting &mdash; alpha launched this week.
-
-
----
-
-# Our audience: Sofia
-
-* 15 years old, lives in a small town
-* No brothers or sisters, many friends
-* Interested in fashion, writing; creative
-* Likes using her smartphone
-* Bored in school
-* Ambitious, not sure of her path
+## Just starting &mdash; much left to do!
 
 ---
 class: center, middle, inverse
 name: demo
 
 # demo 1
+## basics, channels
 
 ---
 class: center, middle
 
-# pretty nice?
+# will Sophia like it?
 
 ---
 class: center, middle, inverse
 name: walkthrough
 
 # demo 2
+## navigation, services
 
 ---
 name: recipe
 
-# The Appmaker recipe
+# How apps are really made
 
 1. Find an app you like
 1. Modify it
@@ -218,27 +228,33 @@ name: recipe
 
 ---
 
-# Possible paths for Sofia
+# Possible paths for Sophia
 
-* Take a chat app, and make a place for her and her friends to talk
-* Take a photoblogging app, and make a fashion app instead
-* Take a recipe-publishing app, and make it share her poetry instead
+## Take a chat app, and make a place for her and her friends to talk
+## Take a photoblogging app, and make a fashion app instead
+## Take a recipe-publishing app, and make it share her poetry instead
 
 ---
 
 # What success looks like
 
-* Sofia enjoys making _her own app_
+* Sophia enjoys making _her own app_
+
   * amused, proud, shares with friends
   * this doesn't feel like school or work, more like a game
-* Sofia curious about how app works
+
+{{content}}
+--
+
+* Sophia _curious_ about how app works
+
   * Starts to learn programming to make a component
   * Makes a fashion component
-* Sofia **builds an app that helps:**
-  * show her creativity
-  * show her talent
-  * show her ambitition
-  * gets her a job
+{{content}}
+
+--
+
+* Sophia builds an app that helps get her a _job_
 
 ---
 
@@ -248,16 +264,15 @@ name: recipe
 
 ### Channels are simple
 
-### We build on modern web technology &amp; **hide** most of it
+### We build on modern web technology &amp; _hide_ most of it
 
 ---
 
-# Appmaker is _not_ trying to:
+# Appmaker is _not_:
 
-* build tools for developers
+* tools for developers
 * teaching code directly
-* for making apps in appstores
-* making conventional business apps
+* for making big commercial apps
 
 We want people to graduate from Appmaker to more advanced tools.
 
@@ -282,7 +297,7 @@ Appmaker apps are built on the web.
 
 Today they work best on FirefoxOS, Firefox for Android
 
-Use as web pages on other phones (depending on components)
+Work as web pages on other phones
 
 Over time, spread to more operating systems
 
@@ -311,18 +326,24 @@ name: component-structure
 * We use Polymer .url[(polymer-project.org)]
 
 ---
+
+class: center, middle
+
+# Example component: Flickr
+
+---
 class: tutorial
 
 
-### 1. Clone the repo 
+### 1. Cloned the repo
 
 `git@github.com:mozilla-appmaker/start-here.git`
 
-(you can rename it)
+(renamed it to 'component-flickr')
 
 ```unix
-$ git clone git@github.com:your_name/my-component.git
-$ cd my-component
+$ git clone git@github.com:davidascher/component-flickr.git
+$ cd component-flickr
 $ npm install
 $ grunt # starts a server, gives a URL
 ```
@@ -332,18 +353,24 @@ $ grunt # starts a server, gives a URL
 ### 3. Edit/Save/Reload!
 
 ---
+name: flickr
+
+background-image: url(../img/flickrcomp.png);
+
+
+---
 class: inverse
 name: sample
 
 ```
-<polymer-element name="ceci-button"
+<polymer-element name="ceci-flickr"
   extends="ceci-element"
-  attributes="textcolor buttoncolor buttonactivecolor label value"
-  label="Click Me" textcolor="#ffffff" buttoncolor="#4DB227"
-  buttonactivecolor="#358915">
+  attributes="onlytags searchterm location"
+  onlytags="false" searchterm="house">
   <template>
     <link rel="stylesheet" href="component.css"></link>
-    <button id="button" on-click="{{click}}"></button>
+    <img id="flickr" class="image" on-click="{{sendImage}}"></button>
+    <div id="loading" class="loading"></div>
     <shadow></shadow>
     <script type="text/json" id="ceci-definition">
 ```
@@ -354,27 +381,12 @@ name: sample
     </script>
   </template>
   <script>
-    Polymer('ceci-button', {
-      ready: function () {
+    Polymer('ceci-flickr', {
 ```
 .inverse.fakecode[
          [… logic …](#logic)
 ]
 ```
-      },
-      click: function () {
-        this.broadcast('click', this.getAttribute('value'));
-      },
-      labelChanged: function (oldValue, newValue) {
-        this.$.button.innerHTML = newValue;
-      },
-      textcolorChanged: function (oldValue, newValue) {
-        this.$.button.style.color = newValue;
-      },
-      buttoncolorChanged: function (oldValue, newValue) {
-        this.$.button.style.backgroundColor = newValue;
-      }
-    });
   </script>
 </polymer-element>
 ```
@@ -382,7 +394,53 @@ name: sample
 ---
 name: JSON
 
-Here we describe the JSON blob
+```javascript
+      {
+        "name": "Flickr Image Viewer",
+        "tags": ["flickr", "click", "tap"],
+        "thumbnail": "./thumbnail.png",
+        "broadcasts": {
+          "sendImage": {
+            "label": "Send image URL",
+            "description": "Occurs when the image is clicked",
+            "default": true
+          }
+        },
+        "listeners": {
+          "newImage": {
+            "description": "Searches for a new image",
+            "label": "Fetch New Image"
+          }
+        },
+        …
+```
+
+---
+
+```
+…
+        "attributes": {
+          "onlytags": {
+            "label": "Tag Mode",
+            "description": "Only use tags to search",
+            "editable": "boolean",
+            "listener": true
+          },
+          "location": {
+            "label": "Location",
+            "description": "Location used to filter images (lat, long)",
+            "editable": "text",
+            "listener": true
+          },
+          "searchterm": {
+            "label": "Search term",
+            "description": "Term used to search for images",
+            "editable": "text",
+            "listener": true
+          }
+        }
+      }
+```
 
 ---
 template: sample
@@ -394,35 +452,98 @@ point out where the logic is in the template.
 ---
 name: logic
 
-Here we describe the logic of the constructor
+```javascript
+    Polymer('ceci-flickr', {
+      ready: function () {
+        …
+      },
+      sendImage: function () {
+        this.broadcast('sendImage', this.$.flickr.getAttribute('src'));
+      },
+      onlytagsChanged: function () {
+        this.newImage();
+      },
+      searchtermChanged: function () {
+        this.newImage();
+      },
+      getJSON: function(url, successHandler, errorHandler) {
+      …
+      },
+      newImage: function() {
+      …
+      }
+    });
+```
+---
+name: flickr
+
+background-image: url(../img/flickrcomp.png);
+
+---
+
+class: middle center
+
+# A web developer can make a _useful_ component in an hour
+
+---
+
+class: middle center
+
+# There are millions of web developers
+
+---
+
+class: middle center
+
+# Many are excited about democratizing the mobile web
+
+---
+
+class: middle center white
+
+# Promise of much more accessible app authoring
+
+---
+
+class: middle center
+
+# localized in pt-br first!
+
 
 ---
 name: challenges
+class: middle center
 
-# Current Challenges
+# Need: partners to test both relevance and design
 
-Need to test both relevance and design
+## what does Sophia _really_ want to make?
 
-* partnerships to test in real markets, and not just in the lab
-* what does Sofia _really_ want to make?
+---
+class: middle center
 
-Need more components
+# Need: many more components
 
-* it's a combinatorial system: needs more inputs
-* what components will _you_ make?
+## what components would _you_ make?
 
-Need more contributors
+---
+class: middle center
 
-* hugely ambitious project: we need your help!
+# Need: more contributors
+
+## hugely ambitious project: we need your help!
+
+## `github.com/mozilla-appmaker`
 
 ---
 # Future
 
-More apps, components, languages
+## More apps, components, languages
 
-On-tablet authoring
+## On-tablet authoring
 
-On-phone authoring
+## On-phone authoring
+
+## Attached services
 
 ---
 template: true
@@ -434,7 +555,8 @@ template: true
 
 --
 
-Make an app and share it.
+Run usability test
+`bit.ly/appmaker_usabilidade`
 {{content}}
 
 --
@@ -469,17 +591,17 @@ Or whatever you think is right!
 
 ---
 name: last
-class: white
 
 ## muito obrigado pela sua paciência
 
-# Any questions?
+# Questions?
 
 ![Default-aligned image](img/chefpot.png)
 
 .footer[
 .footer_bl[
 ## David Ascher [da@mozilla.com](mailto:da@mozilla.com)
+## twitter: [@davidascher](https://twitter.com/davidascher)
 ## [appmaker.mozillalabs.com](https://appmaker.mozillalabs.com)
 ## [github://mozilla-appmaker](github.com/mozilla-appmaker)
 ]

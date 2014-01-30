@@ -6,6 +6,7 @@
       font-family: 'Open Sans';
       font-size: 30px;
       color: white;
+      background: orange !important;
     }
     h1, h2, h3 {
       font-family: 'Open Sans';
@@ -38,7 +39,7 @@
       text-decoration: none;
     }
     .wite a {
-      color: red;
+      color: red;yy
     }
     code {
       padding: .3em;
@@ -73,6 +74,9 @@
       right: inherit;
       font-size: small;
     }
+    .remark-slide-scaler {
+      background-color: black;
+    }
     .emoticon {
       position: absolute;
       right: 1em;
@@ -82,13 +86,10 @@
 
     .remark-slide-content {
       background-position: top !important;
-      background-image: url("../img/grey.png");
+      /*background-image: url("../img/grey.png");*/
       background-size: 100%;
     }
 
-    .black {
-      background: black !important;
-    }
     .white {
       background: white !important;
       color: black;
@@ -221,6 +222,14 @@
       right: 0;
       border: 0;
     }
+
+    #slide-flickr {
+      background-image: url(../img/flickrcomp.png);
+    }
+    #slide-flickr2 {
+      background-image: url(../img/flickrcomp.png);
+    }
+
 
     /* Two-column layout */
     .left-column {
