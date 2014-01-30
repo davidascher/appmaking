@@ -229,6 +229,9 @@
       background-image: url(../img/flickrcomp.png);
     }
 
+    #slide-cat {
+      background-image: url(../img/cat_tall.png);
+    }
 
     /* Two-column layout */
     .left-column {

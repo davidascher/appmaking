@@ -286,6 +286,9 @@ Current focus is on simple, fun, personalizable.
 * apps in service of "real world" small business: customer communication, simple payments
 
 ---
+name: cat
+
+---
 
 # Where will the apps work?
 
@@ -293,7 +296,7 @@ Appmaker apps are built on the web.
 
 Today they work best on FirefoxOS, Firefox for Android
 
-Work as web pages on other phones
+Work as web apps on other phones (offline, device access)
 
 Over time, spread to more operating systems
 
@@ -313,13 +316,11 @@ name: advanced
 ---
 name: component-structure
 
-# What are components?
+# What are Appmaker components?
 
-## A specific kind of Web Components
+## Using HTML5 Web Components
 
-* new part of HTML5, being standardized
-* Polyfill library in the meantime
-* We use Polymer .url[(polymer-project.org)]
+## Details about channels and attributes
 
 ---
 
@@ -327,148 +328,40 @@ class: center, middle
 
 # Example component: Flickr
 
+
+---
+
+## A component is a new HTML element
+
+```
+    html <img>
+    html <div>
+appmaker <fireworks>
+appmaker <chatroom>
+     new <appmaker-flickr>
+```
+
+## Component definition has
+
+* logic
+* styling
+* channels
+* attributes
+
+
 ---
 class: tutorial
 
 
-### 1. Cloned the repo
+### 1. Clone the repo
 
-`git@github.com:mozilla-appmaker/start-here.git`
-
-(renamed it to 'component-flickr')
-
-```unix
-$ git clone git@github.com:davidascher/component-flickr.git
-$ cd component-flickr
-$ npm install
-$ grunt # starts a server, gives a URL
-```
+![Default-aligned image](img/github.png)
 
 ### 2. Teach Appmaker about the URL (in the UI)
 
+![Default-aligned image](img/addcomp.png)
+
 ### 3. Edit/Save/Reload!
-
----
-name: flickr
-
-background-image: url(../img/flickrcomp.png);
-
-
----
-class: inverse
-name: sample
-
-```
-<polymer-element name="ceci-flickr" extends="ceci-element"
-  attributes="onlytags searchterm location"
-  onlytags="false" searchterm="house">
-  <template>
-    <link rel="stylesheet" href="component.css"></link>
-    <img id="flickr" class="image" on-click="{{sendImage}}"></button>
-    <div id="loading" class="loading"></div>
-    <script type="text/json" id="ceci-definition">
-```
-.inverse.fakecode[
-        [… JSON …](#JSON)
-]
-```
-    </script>
-  </template>
-  <script>
-    Polymer('ceci-flickr', {
-```
-.inverse.fakecode[
-         [… logic …](#logic)
-]
-```
-  </script>
-</polymer-element>
-```
-
----
-class: inverse
-name: JSON
-
-```javascript
-{
-  "name": "Flickr Image Viewer",
-  "tags": ["flickr", "click", "tap"],
-  "thumbnail": "./thumbnail.png",
-  "broadcasts": {
-    "sendImage": {
-      "label": "Send image URL",
-      "description": "Occurs when the image is clicked",
-      "default": true
-    }
-  },
-  "listeners": {
-    "newImage": {
-      "description": "Searches for a new image",
-      "label": "Fetch New Image"
-    }
-  },
-  …
-```
-
----
-class: inverse
-
-```
-"attributes": {
-  "onlytags": {
-    "label": "Tag Mode",
-    "description": "Only use tags to search",
-    "editable": "boolean",
-    "listener": true
-  },
-  "location": {
-    "label": "Location",
-    "description": "Location used to filter images (lat, long)",
-    "editable": "text",
-    "listener": true
-  },
-  "searchterm": {
-    "label": "Search term",
-    "description": "Term used to search for images",
-    "editable": "text",
-    "listener": true
-  }
-}
-```
-
----
-template: sample
-
-???
-
-point out where the logic is in the template.
-
----
-name: logic
-class: inverse
-
-```javascript
-Polymer('ceci-flickr', {
-  ready: function () {
-    …
-  },
-  sendImage: function () {
-    this.broadcast('sendImage', this.$.flickr.getAttribute('src'));
-  },
-  onlytagsChanged: function () {
-    this.newImage();
-  },
-  searchtermChanged: function () {
-    this.newImage();
-  },
-  getJSON: function(url, successHandler, errorHandler) {
-    …
-  },
-  newImage: function() {
-    …
-  }
-});
-```
 ---
 name: flickr
 
@@ -504,6 +397,7 @@ class: middle center
 
 # localized in pt-br first!
 
+## Thanks @panaggio and @agarzia!
 
 ---
 name: challenges
@@ -566,7 +460,7 @@ Teach someone
 
 --
 
-Make a new component
+Make a new component: `github.com/mozilla-appmaker/start-here`
 {{content}}
 
 --
@@ -602,6 +496,10 @@ name: last
 ]
 ]
 ---
+class: center, middle
+
+# @MozAppmakerBR
+
     </textarea>
     <script src="js/remark-0.5.9.min.js" type="text/javascript">
     </script>
